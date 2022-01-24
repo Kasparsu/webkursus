@@ -1,0 +1,39 @@
+body {
+    background-color:coral;
+}
+#white {
+    color: #ffffff;
+    height: 50vh;
+    border: 5px black solid;
+}
+#red {
+    color: #FF0000;
+}
+#green {
+    color: #339e33;
+}
+#blue {
+    color: #00F; 
+}
+.orange {
+    color: orange;
+}
+.bgblack {
+    background-color: black;
+}
+
+p.orange.bgblack#text {
+
+}
+
+ul a {
+    border: red 3px solid;
+}
+
+ul>li>a {
+    border: green 3px solid;
+}
+
+h2,h3,h4,h5 {
+    margin-left: 50%;
+}
