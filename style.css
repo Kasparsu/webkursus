@@ -1,39 +1,11 @@
-body {
-    background-color:coral;
-}
-#white {
-    color: #ffffff;
-    height: 50vh;
-    border: 5px black solid;
-}
-#red {
-    color: #FF0000;
-}
-#green {
-    color: #339e33;
-}
-#blue {
-    color: #00F; 
-}
-.orange {
-    color: orange;
-}
-.bgblack {
-    background-color: black;
+#nav {
+    display: grid;
+    font-size: xx-large;
+    list-style-type: none;
+    grid-template-columns: [first] 40px [line2] 50px [line3] auto [col4-start] 50px [five] 40px [end];
+    grid-template-rows: [row1-start] 25% [row1-end] 100px [third-line] auto [last-line];
 }
 
-p.orange.bgblack#text {
-
-}
-
-ul a {
-    border: red 3px solid;
-}
-
-ul>li>a {
-    border: green 3px solid;
-}
-
-h2,h3,h4,h5 {
-    margin-left: 50%;
+#nav>li {
+    margin-left: 1rem;
 }
