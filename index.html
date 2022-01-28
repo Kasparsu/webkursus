@@ -41,6 +41,163 @@
         console.log(number);
         number = 0.1 + 0.2;
         console.log(number);
+        let secondsInYear = 60*60*24*365;
+        console.log(secondsInYear);
+        let modulo = 5 % 2; 
+        console.log(modulo);
+        number = 0;
+        number++; //increment by 1
+        console.log(number);
+        number--; //decrement by 1
+        // let log = console.log;
+        // console.log(console);
+        // console--;
+        // log(console);
+        console.log(number);
+        number+=10;
+        console.log(number);
+        number-=2;
+        console.log(number);
+        number*=2;
+        console.log(number);
+        number/=4;
+        console.log(number);
+        number%=3;
+        console.log(number);
+        let array = [1, 2, 3, 4]; // (massiiv)
+        console.log(array);
+        console.log(array[0]);
+        array[1] = 5;
+        console.log(array);
+        array = [1, 'asdfasd', true, null, undefined];
+        console.log(array);
+        let array2d = [
+            [1,2,3],
+            [4,5,6],
+            [7,8,9]
+        ];
+        console.log(array2d);
+        console.log(array2d[1][1]);
+        console.log(array2d[2][0]);
+        let array3d = [
+            [
+                [1],
+                [2],
+                [3]
+            ]
+        ];
+        console.log(array3d);
+        console.log(array3d[0][1][0]);
+        let object = {
+            name: 'Kaspar',
+            age: 28,
+            hairColor: 'Yellow',
+            isMale: true,
+            'sur-name': 'Suursalu'
+        }
+        console.log(object);
+        console.log(object.age);
+        console.log(object['sur-name']);
+        console.log(object['age']);
+        
+        let answer = 10 > 2;
+        console.log(answer);
+        answer = 10 > 10;
+        console.log(answer);
+        answer = 10 < 10;
+        console.log(answer);
+        answer = 10 <= 10;
+        console.log(answer);
+        answer = 10 >= 10;
+        console.log(answer);
+        number = 1;
+        answer = number == 10;
+        console.log(answer);
+        number = 4-3*(10-10); // parenthasis changes order of computation
+        console.log(number);
+        answer = 10 == '10';
+        console.log(answer);
+        answer = 10 === '10';
+        console.log(answer);
+        answer = 10 !== '10';
+        console.log(answer);
+        answer = 10 != '10';
+        console.log(answer);
+        answer = true && true;
+        console.log(answer);
+        answer = true && true && false && true;
+        console.log(answer);
+        answer = true || true || false || true;
+        console.log(answer);
+        answer = false || false || false || false;
+        console.log(answer);
+        answer = !true;
+        console.log(answer);
+        answer = !false;
+        console.log(answer);
+        answer = 1;
+        if(5 < answer){
+            console.log('TÕENE!!!!');
+        } else {
+            console.log('VÄÄR!!!!');
+        }
+
+        if(5 < answer){
+            console.log('Suurem kui 5!!!!');
+        } else if (answer > 1) {
+            console.log('SUUREM kui 1 !!!!');
+        } else {
+            console.log('ELSE!!!!');
+        }
+        
+        let dayOfWeek = -1;
+
+        if(dayOfWeek == 0){
+            console.log("esmaspäev");
+        } else if(dayOfWeek == 1){
+            console.log("teisipäev");
+        } else if(dayOfWeek == 2){
+            console.log("kolmapäev");
+        } else if(dayOfWeek == 3){
+            console.log("neljapäev");
+        } else if(dayOfWeek == 4){
+            console.log("reede");
+        } else if(dayOfWeek == 5){
+            console.log("laupäev");
+        } else if(dayOfWeek == 6){
+            console.log("pühapäev");
+        } else {
+            console.log("imelikpäev");
+        }
+        
+        switch(dayOfWeek){
+            case -1:
+            case 0:
+                console.log('esmaspäev');
+                break;
+            case 1:
+                console.log('teisipäev');
+                break;
+            case 2:
+                console.log('kolmapäev');
+                break;
+            case 3:
+                console.log('neljapäev');
+                break;
+            case 4:
+                console.log('reede');
+                break;
+            case 5:
+                console.log('laupäev');
+                break;
+            case 6:
+                console.log('pühapäev');
+                break;
+            default:
+                console.log('imelikpäev');
+                break;
+        }
+
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
