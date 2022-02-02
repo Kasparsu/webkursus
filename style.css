@@ -20,3 +20,10 @@ body {
 #greeting {
     font-weight: 1000;
 }
+
+#myslider .images img {
+    display: none;
+}
+#myslider .images img.active {
+    display: inline;
+}

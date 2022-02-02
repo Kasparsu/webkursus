@@ -1,19 +1,24 @@
-console.log(window);
-//window.location = "https://google.com";
-console.log({document});
-
-let buttonEl = document.getElementById('greet');
-
-buttonEl.addEventListener('click', event =>{
-    //console.log(event);
-    let nameEl = document.querySelector('#name');
-    let ageEl = document.querySelector('#age');
-
-    let h1El = document.getElementsByTagName('h1');
-    console.log(h1El);
-    console.log(h1El[0].innerText);
+let imgs = document.querySelectorAll('#myslider .images img');
+console.log(imgs);
+let prev = document.querySelector('#prev');
+let active = 0;
+prev.addEventListener('click', () => {
+    imgs[active].className = '';
+    active--;
+    if(active<0){
+        active=imgs.length-1;
+    }
+    imgs[active].className = 'active';
     
-    h1El[0].innerText = "Hello " + nameEl.value + " you are " +
-                        ageEl.value + " years old!";
 });
 
+
+document.querySelector('#next').addEventListener('click', () => {
+    imgs[active].className = '';
+    active++;
+    if(active>imgs.length-1){
+        active=0;
+    }
+    imgs[active].className = 'active';
+    
+});
