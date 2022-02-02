@@ -81,5 +81,10 @@ function recursive(i){
 recursive(0);
 
 function multipleParams(a, b, c){
-    
+
 }
+
+let shortFunction = text => text.split('').reverse().join('');
+
+console.log(shortFunction("Kaspar Martin Suursalu"));
+
