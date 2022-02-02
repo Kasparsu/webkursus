@@ -1,18 +1,19 @@
-let num = 2;
+console.log(window);
+//window.location = "https://google.com";
+console.log({document});
 
-let num2 = num;
+let buttonEl = document.getElementById('greet');
 
-num2 = 3;
-console.log(num2);
-console.log(num);
+buttonEl.addEventListener('click', event =>{
+    //console.log(event);
+    let nameEl = document.querySelector('#name');
+    let ageEl = document.querySelector('#age');
 
-let obj = {
-    num: 2
-}
+    let h1El = document.getElementsByTagName('h1');
+    console.log(h1El);
+    console.log(h1El[0].innerText);
+    
+    h1El[0].innerText = "Hello " + nameEl.value + " you are " +
+                        ageEl.value + " years old!";
+});
 
-let obj2 = JSON.parse(JSON.stringify(obj));
-
-obj2.num = 3;
-
-console.log(obj);
-console.log(obj2);
