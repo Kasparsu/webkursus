@@ -1,3 +1,6 @@
+body {
+    background-color: coral;
+}
 .btn-warning, .btn-warning:active {
     background-color: coral;
     border-color: coral;

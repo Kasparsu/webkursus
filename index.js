@@ -1,31 +1,85 @@
-//console.log(foo);
-var bar;
-console.log(bar);
 
-let foo = 'FOO'; // foo, bar, baz
-bar = 'bar'; // hoisting
+function sayHello(){
+    console.log("Hello!!!");
+}
 
-const baz = 'afaf';
-console.log(baz);
-//baz = 'gasdasd'; //error 
+sayHello();
 
-let text = 'asdasd' + baz + foo;
+let sayName = function (name){
+    console.log("Hello " + name);
+}
 
-let text2 = 'asdasd' + baz + foo;
+sayName('Kaspar');
+sayName('Martin');
 
-console.log(text[3]);
-console.log(text.length);
-console.log(text.toLowerCase());
-console.log(text.toUpperCase());
-console.log(text.substring(3, text.length-3));
-//console.log(text.normalize());
+let sayAge = (age) => {
+    if(age > 1) {
+        console.log("you are " + age + " years old");
+    } else {
+        console.log("you are " + age + " year old");
+    }
+} 
 
-let array = [1, 2, 3, 4, 5];
-console.log(array);
-array.push(6);
-console.log(array);
-array.push(7, 8, 9);
-console.log(array);
-console.log(array.pop());
-console.log(array);
 
+// will talk about this more in future
+
+// const readline = require('readline');
+// const rl = readline.createInterface({
+//   input: process.stdin,
+//   output: process.stdout
+// });
+
+// rl.question('What is your age ? ', function (age) {
+//     sayAge(age);
+//     rl.close();
+// });
+
+
+
+//alert('afasfasdasd');
+console.log(this);
+
+function example1(){
+    console.log(this);
+}
+
+let person = {
+    age: 24,
+    getAge(){
+       console.log(this); 
+    },
+    getAge2: function () {
+        console.log(this);
+    },
+    getAge3: () => {
+        console.log(this);
+    }
+}
+
+person.getAge();
+person.getAge2();
+person.getAge3();
+
+
+person = {
+    age: 24,
+    getAge(){
+       return this.age;
+    }
+}
+
+let age = person.getAge();
+console.log(age);
+console.log(person.getAge());
+
+function recursive(i){
+    console.log(i);
+    if(i<10){
+        recursive(i+1);
+    }
+}
+recursive(0);
+
+function multipleParams(a, b, c){
+    
+}
