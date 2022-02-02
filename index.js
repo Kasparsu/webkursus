@@ -1,90 +1,50 @@
+let numbers = [1,2,3,4,5,6,7,8,9,10];
 
-function sayHello(){
-    console.log("Hello!!!");
-}
-
-sayHello();
-
-let sayName = function (name){
-    console.log("Hello " + name);
-}
-
-sayName('Kaspar');
-sayName('Martin');
-
-let sayAge = (age) => {
-    if(age > 1) {
-        console.log("you are " + age + " years old");
-    } else {
-        console.log("you are " + age + " year old");
-    }
-} 
-
-
-// will talk about this more in future
-
-// const readline = require('readline');
-// const rl = readline.createInterface({
-//   input: process.stdin,
-//   output: process.stdout
-// });
-
-// rl.question('What is your age ? ', function (age) {
-//     sayAge(age);
-//     rl.close();
-// });
-
-
-
-//alert('afasfasdasd');
-console.log(this);
-
-function example1(){
-    console.log(this);
-}
-
-let person = {
-    age: 24,
-    getAge(){
-       console.log(this); 
+let people = [
+    {
+        name: 'kaspar',
+        age: 28
     },
-    getAge2: function () {
-        console.log(this);
+    {
+        name: 'martin',
+        age: 42
     },
-    getAge3: () => {
-        console.log(this);
-    }
-}
+    {
+        name: 'oleg',
+        age: 86
+    },
+    {
+        name: 'jaanus',
+        age: 11
+    },
+    {
+        name: 'gagarin',
+        age: 53
+    },
+];
 
-person.getAge();
-person.getAge2();
-person.getAge3();
 
 
-person = {
-    age: 24,
-    getAge(){
-       return this.age;
-    }
-}
+let evenNumbers = numbers.filter(num => num%2===0);
+console.log(evenNumbers);
 
-let age = person.getAge();
-console.log(age);
-console.log(person.getAge());
+let youngPeople = people.filter(person => person.age < 60);
+console.log(youngPeople);
+let oldPeople = people.filter(person => person.age >= 60);
+console.log(oldPeople);
 
-function recursive(i){
-    console.log(i);
-    if(i<10){
-        recursive(i+1);
-    }
-}
-recursive(0);
+let poweredNumbers = numbers.map(num => num*num);
+console.log(poweredNumbers);
 
-function multipleParams(a, b, c){
+let names = people.map(person => person.name);
+console.log(names);
 
-}
+let ageSum = people.reduce((sum, person) => sum+=person.age, 0);
+console.log(ageSum);
 
-let shortFunction = text => text.split('').reverse().join('');
+people.sort((personA, personB) => personB.age-personA.age);
+console.log(people);
 
-console.log(shortFunction("Kaspar Martin Suursalu"));
-
+people.forEach(value => {
+    console.log(value.name);
+});
